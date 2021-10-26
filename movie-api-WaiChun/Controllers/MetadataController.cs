@@ -37,7 +37,7 @@ namespace movie_api_WaiChun.Controllers
             bool AddNewItem = _metadataService.PostItem(itemData);
 
             if(AddNewItem)
-            return CreatedAtAction(nameof(Get), new { id = itemData.Id }, "");
+            return CreatedAtAction(nameof(Post), "", "");
 
             return BadRequest();
         }
